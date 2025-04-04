@@ -8,6 +8,7 @@ jQuery(document).ready(function($) {
 
 	"use strict";
 
+	$('#copyright-year').text(new Date().getFullYear());
 	
 
 	var siteMenuClone = function() {
