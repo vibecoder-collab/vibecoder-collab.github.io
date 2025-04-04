@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
 /* Base */
 body {
   line-height: 1.7;
