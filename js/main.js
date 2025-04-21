@@ -5,6 +5,12 @@ jQuery(document).ready(function ($) {
 		once: true
 	});
 
+	setTimeout(() => {
+		document.querySelectorAll('.fade-up').forEach(el => {
+			el.classList.add('loaded');
+		});
+	}, 400)
+
 	$('#copyright-year').text(new Date().getFullYear());
 
 

@@ -856,6 +856,18 @@ h5 {
     padding-left: 15px !important
 }
 
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-up.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 .site-blocks-cover.overlay {
     position: relative
 }
