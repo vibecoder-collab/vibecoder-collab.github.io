@@ -204,7 +204,7 @@ jQuery(document).ready(function ($) {
 				if ($(hash).length) {
 					$('html, body').animate({
 						scrollTop: $(hash).offset().top
-					}, 400, 'easeInOutExpo', function () {
+					}, 400, 'easing', function () {
 						window.location.hash = hash;
 					});
 				}
