@@ -210,7 +210,7 @@ jQuery(document).ready(function ($) {
 				if ($(hash).length) {
 					$('html, body').animate({
 						scrollTop: $(hash).offset().top
-					}, 400, 'easing', function () {
+					}, 400, 'easeInOutExpo', function () {
 						window.location.hash = hash;
 					});
 				}
@@ -219,5 +219,4 @@ jQuery(document).ready(function ($) {
 
 	};
 	OnePageNavigation();
-
 });
