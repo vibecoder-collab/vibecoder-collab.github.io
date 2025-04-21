@@ -855,16 +855,21 @@ h5 {
     padding-left: 15px !important
 }
 
-.site-blocks-cover {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-position: center center
-}
-
 .site-blocks-cover.overlay {
     position: relative
 }
+
+
+.site-blocks-cover .parallax-img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+}
+
 
 .site-blocks-cover.overlay:before {
     position: absolute;
