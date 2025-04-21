@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "critical": "node generate-critical.js"
+  },
+  "devDependencies": {
+    "critical": "^7.2.1"
+  },
+  "type": "module"
+}
