@@ -1,11 +1,15 @@
-# ЛогисТрек
+<p align='center'>
+    <img src="icon.svg">
+    <h1 align='center'>ЛогисТрек</h1>
+</p>
 
-## Link to site
-```
-https://vibecoder-collab.github.io
-```
-[](https://vibecoder-collab.github.io)
+[Ссылка на сайт](https://vibecoder-collab.github.io)
+
 Ключевое слово: 
 ```
 Международная логистика
+```
+Акцетный цвет:
+```
+#F16821
 ```
