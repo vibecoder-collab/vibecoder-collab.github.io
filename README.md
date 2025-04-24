@@ -1,8 +1,11 @@
-# Hi there 👋
+# ЛогисТрек
 
 ## Link to site
 ```
 https://vibecoder-collab.github.io
 ```
-[Rick Roll](https://vibecoder-collab.github.io)
-## Goodbye there :)
+[](https://vibecoder-collab.github.io)
+Ключевое слово: 
+```
+Международная логистика
+```
