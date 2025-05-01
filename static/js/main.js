@@ -2,7 +2,7 @@ jQuery(document).ready(function ($) {
 	AOS.init({
 		duration: 800,
 		easing: 'slide',
-		once: true
+		once: true,
 	});
 
 	setTimeout(() => {
@@ -11,11 +11,22 @@ jQuery(document).ready(function ($) {
 		});
 	}, 400)
 
+
+	const currentUrl = window.location.pathname.split('/').pop() || '';
+	const navLinks = document.querySelectorAll('.site-menu a.nav-link');
+
+	navLinks.forEach(link => {
+		const linkUrl = link.getAttribute('href').split('/').pop();
+
+		if (currentUrl === linkUrl || (currentUrl === '' && linkUrl === 'index.html')) {
+			link.parentElement.classList.add('active');
+		}
+	});
+
 	$('#copyright-year').text(new Date().getFullYear());
 
 
 	var siteMenuClone = function () {
-
 		$('.js-clone-nav').each(function () {
 			var $this = $(this);
 			$this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
@@ -23,7 +34,6 @@ jQuery(document).ready(function ($) {
 
 
 		setTimeout(function () {
-
 			var counter = 0;
 			$('.site-mobile-menu .has-children').each(function () {
 				var $this = $(this);
@@ -175,7 +185,6 @@ jQuery(document).ready(function ($) {
 	};
 	siteCarousel();
 
-	// scroll
 	var scrollWindow = function () {
 		$(window).scroll(function () {
 			var $w = $(this);
@@ -197,26 +206,34 @@ jQuery(document).ready(function ($) {
 	};
 	scrollWindow();
 
-
-	// navigation
-	var OnePageNavigation = function () {
-		$("body").on(
-			"click",
-			"#site-navbar .site-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a",
-			function (e) {
-				e.preventDefault();
-				var hash = this.hash;
-
-				if ($(hash).length) {
-					$('html, body').animate({
-						scrollTop: $(hash).offset().top
-					}, 400, 'easeInOutExpo', function () {
-						window.location.hash = hash;
-					});
-				}
+	function animateNumber($element, targetNumber, duration) {
+		$({ count: 0 }).animate({ count: targetNumber }, {
+			duration: duration,
+			easing: 'swing',
+			step: function () {
+				$element.text(Math.floor(this.count));
+			},
+			complete: function () {
+				$element.text(targetNumber);
 			}
-		);
+		});
+	}
 
-	};
-	OnePageNavigation();
+	function startAnimationIfVisible() {
+		$('.counter-box [data-number]').each(function () {
+			const $this = $(this);
+			const targetNumber = parseInt($this.data('number'));
+			const isVisible = $this.is(':visible') && $this.parents().filter(function () {
+				return $(this).css('opacity') === '0' || $(this).css('visibility') === 'hidden';
+			}).length === 0;
+
+			if (isVisible && !$this.hasClass('animated')) {
+				$this.addClass('animated');
+				animateNumber($this, targetNumber, 2000);
+			}
+		});
+	}
+
+	startAnimationIfVisible();
+	$(window).on('scroll resize', startAnimationIfVisible);
 });

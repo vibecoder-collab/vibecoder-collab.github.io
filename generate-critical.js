@@ -1,12 +1,13 @@
+// Run: npm run critical
 import { generate } from 'critical';
 
 
 generate({
     base: './',
-    src: 'index.html',
+    src: 'dist/index.html',
     target: {
         // Output file
-        css: 'critical.css',
+        css: 'static/css/critical.min.css',
     },
     width: 1300,
     height: 900,

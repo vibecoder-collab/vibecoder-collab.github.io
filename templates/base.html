@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ meta.description }}">
+    <meta name="keywords" content="{{ meta.keywords }}">
+
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+
+    <link rel="stylesheet" href="static/css/critical.min.css">
+
+    <!-- PRELOAD_PLACEHOLDER -->
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    </noscript>
+
+    <link rel="stylesheet" href="static/css/aos.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="static/css/aos.css">
+    </noscript>
+
+    <link rel="stylesheet" href="static/fonts/flaticon/font/flaticon.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="static/fonts/flaticon/font/flaticon.css">
+    </noscript>
+
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+    </noscript>
+
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+    </noscript>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+    </noscript>
+
+    <link rel="stylesheet" href="static/css/style.min.css">
+
+    <title>{{ page.title }}</title>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
+    {% include 'header.html' %}
+    <main>
+        {{ content }}
+    </main>
+    {% include 'footer.html' %}
+
+    <script src="static/js/aos.js"></script>
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/jquery.easing.min.1.3.js" defer></script>
+    <script src="static/js/jquery.countdown.min.js" defer></script>
+    <script src="static/js/jquery.magnific-popup.min.js" defer></script>
+
+    <script src="static/js/popper.min.js" defer></script>
+    <script src="static/js/bootstrap.min.js" defer></script>
+    <script src="static/js/owl.carousel.min.js" defer></script>
+
+    <script src="static/js/main.min.js"></script>
+</body>
+
+</html>
