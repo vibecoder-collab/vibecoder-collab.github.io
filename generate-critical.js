@@ -4,7 +4,7 @@ import { generate } from 'critical';
 
 generate({
     base: './',
-    src: 'dist/index.html',
+    src: 'index.html',
     target: {
         // Output file
         css: 'static/css/critical.min.css',
